@@ -1,17 +1,13 @@
-class Mine {
+class Mine extends District{
     public static MAX_LABOR = 1.0;
-    private _labor:number;
 
-    constructor(labor:number = 0, public infastructure:Array<number> = [0.1]) {
-        this._labor = Math.min(labor, Mine.MAX_LABOR);
+    constructor(labor:number = 0, public infrastructure:Array<number> = [0.1]) {
+        super(labor, infrastructure);
     }
 
-    set labor(labor:number) {
-        this.labor = Math.max(Mine.MAX_LABOR, labor)
-    }
-
-    get labor() {
-        return this._labor
+    public getMaxLabor() : Number
+    {
+        return Mine.MAX_LABOR;
     }
 
     get strength() {
