@@ -4,3 +4,5 @@
 /test/**/*.map
 /test/**/*.js
 /.idea
+/typings
+/*.log
